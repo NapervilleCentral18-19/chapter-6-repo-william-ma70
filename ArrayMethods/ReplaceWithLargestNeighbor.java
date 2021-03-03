@@ -5,7 +5,13 @@ public class ReplaceWithLargestNeighbor
    public void replaceWithLargestNeighbor(int[] arr)
    {
       // Start loop at one, and stop before the end
-
+      for(int s=1; s<arr.length; s+=2)
+      {
+          if(arr[s]>arr[s-1])
+            arr[s-1]=arr[s];
+          else if (arr[s-1]>arr[s])
+            arr[s] = arr[s-1];
+        }
    }
 
    public static void main(String[] args)

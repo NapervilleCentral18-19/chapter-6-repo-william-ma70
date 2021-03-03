@@ -4,7 +4,22 @@ public class InOrder
    {
       // Assume they are in order.
       boolean ordered = true;
-
+      int count=1;
+      int temp=0;
+      for (int s: arr)
+        {
+            
+            if ((count+1)<arr.length)
+                temp = arr[s+1];
+                
+            if (arr[s]>arr[s+1])
+                ordered = false;
+            count++;
+          }
+      for (int i = 0; i < arr.length - 1; i++)
+      {
+          i
+      return ordered;
    }
 
    public static void main(String[] args)

@@ -4,10 +4,16 @@ public class ContainsDuplicates
    {
       // Assume no dupes.
       boolean dupes = false;
-
-
+      for (int s=0; s<arr.length; s++)
+      {
+           for (int t=0; t<arr.length; t++)
+           {
+                if(arr[s]==arr[t] && s!=t)
+                    dupes=true;
+                }
    }
-
+   return dupes;
+}
    public static void main(String[] args)
    {
       int[] arr1 = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 42 };

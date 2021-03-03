@@ -1,0 +1,14 @@
+#BlueJ class context
+comment0.target=ch6intro_to_array
+comment1.params=args
+comment1.target=void\ main(java.lang.String[])
+comment2.params=array
+comment2.target=int[]\ doubleSize(int[])
+comment3.params=x
+comment3.target=void\ foo(int)
+comment4.params=num
+comment4.target=void\ foo(int[])
+comment5.params=numbers
+comment5.target=int\ oddnumbers(int[])
+comment5.text=\n\ @param\ array\n\ @return\ int\ of\ how\ many\ odd\ values\ are\ in\ the\ array\n
+numComments=6

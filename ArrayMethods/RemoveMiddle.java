@@ -6,17 +6,47 @@ public class RemoveMiddle
    {
       int size = arr.length;
        // Size is even
-
+       if(size%2 ==2)
          // Figure out starting point for removal
-
+         {
+             int middle1 = (arr.length-1)/2;
+             int middle2 = (arr.length+1)/2;
+            arr[middle1]=0;
+            arr[middle2]=0;
+            int temp2=0; //{1,2,3,4,5}
+            int temp1=arr[middle2];
+            int last=arr[arr.length-1];
+            for (int s=0; s<arr.length-1; s++)
+            {
+                temp2 = arr[s+1];
+                arr[s+1]=temp1;
+                temp1=temp2;
+            }
+       arr[middle2]=last;
+            }
 
          // Remove middle two elements
 
 
       // Size is odd
-
+      else if (size%2==1)
          // Figure out starting point for removal
-
+         {
+            int middle = arr.length/2;
+            arr[middle]=0;
+            int temp2=0; //{1,2,3,4,5}
+            int temp1=arr[middle];
+            int last=arr[arr.length-1];
+            while(arr[arr.length-1]!=0){
+            for (int s=middle; s<arr.length-1; s++)
+            {
+                temp2 = arr[s+1];
+                arr[s+1]=temp1;
+                temp1=temp2;
+            }
+        }
+       arr[middle]=last;
+            }
 
          // Remove middle element
 

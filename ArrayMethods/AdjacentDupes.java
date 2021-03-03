@@ -4,10 +4,15 @@ public class AdjacentDupes
    {
       // Assume no adjacent dupes.
       boolean adjDupes = false;
-
+      
+      for (int i = 0; i < arr.length - 1; i++)
+      {
+          if (arr[i]==arr[i+1])
+                adjDupes = true;
+            }
       // Loop through array, checking for duplicates
       // next to each other.
-
+      return adjDupes;
    }
 
    public static void main(String[] args)
