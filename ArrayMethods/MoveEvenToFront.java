@@ -4,16 +4,25 @@ public class MoveEvenToFront
 {
    public void moveEvenToFront(int[] arr)
    {
+      // Even
+      // Save the even number
       int endOfEvens = 0;
       int temp;
-
-       // Even
-          // Save the even number
-
-            // Move array element from end of
-            // evens to current location
-
+      int nextOpen = 0;
+      
+      for (int i=0; i<arr.length; i++) {
+          if (arr[i]%2==0) {
+              temp = arr[nextOpen];
+              // Move array element from end of
+              // evens to current location
+              arr[nextOpen] = arr[i];
+              arr[i] = temp;
+              nextOpen++;
+          }
+      }
    }
+
+          
 
    public static void main(String[] args)
    {

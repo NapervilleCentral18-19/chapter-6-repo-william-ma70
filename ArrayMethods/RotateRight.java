@@ -8,15 +8,21 @@ public class RotateRight
        int temp2=0; //{1,2,3,4,5}
        int temp1=arr[0];
        int last=arr[arr.length-1];
-       for (int s=0; s<arr.length-1; s++)
+       /*for (int s=0; s<arr.length-1; s++)
             {
                 temp2 = arr[s+1];
                 arr[s+1]=temp1;
                 temp1=temp2;
+                
+               
             }
-       arr[0]=last;
+       */
+       for(int s=last; s>0; s--)
+       {
+           arr[s]=arr[s-1];
    }
-
+   arr[0]=last;
+}
    public static void main(String[] args)
    {
       int[] randoms = new int[10];

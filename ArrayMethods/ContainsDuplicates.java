@@ -6,9 +6,9 @@ public class ContainsDuplicates
       boolean dupes = false;
       for (int s=0; s<arr.length; s++)
       {
-           for (int t=0; t<arr.length; t++)
+           for (int t=s+1; t<arr.length; t++)
            {
-                if(arr[s]==arr[t] && s!=t)
+                if(arr[s]==arr[t])// && s!=t)
                     dupes=true;
                 }
    }
