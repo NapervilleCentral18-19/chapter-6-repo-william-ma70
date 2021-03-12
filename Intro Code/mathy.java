@@ -19,6 +19,8 @@ public class mathy
 
     public mathy(int [][] array)
     {
+        //alias - arrays are objects thus passed by reference
+        //if I change square it will change array in the client code
         square = array;
 
     }
@@ -147,19 +149,20 @@ public class mathy
     public static int sum2DArray(int [][] scores)
     {
 
-
+        int sum=0;
 
         for ( int row=0; row < scores.length; row++)
         {
             for ( int col=0; col < scores[row].length; col++)
-
+            {
                 System.out.print (scores[row][col] + "\t");
-
+                sum+=scores[row][col];
+            }
             System.out.println();
         }
 
 
-        return 0;
+        return sum;
 
     }
 
@@ -168,7 +171,14 @@ public class mathy
     public int sumOneRow2DArray(int row)
     {   int total = 0;
 
-
+            
+            for ( int col=0; col < square[row].length; col++)
+            {
+                System.out.print (square[row][col] + "\t");
+                total+=square[row][col];
+            }
+            System.out.println();
+        
 
 
         return total;

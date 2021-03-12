@@ -1,4 +1,4 @@
-/********************************************************************
+    /********************************************************************
 // These are the notes for ch 6 used in hayes class
 
 
@@ -21,7 +21,7 @@ public class ch6intro_to_array
 public static void main (String[] args)
 {
 
-/**/
+/*
         mathy useful = new mathy();
         int x = 50;
         
@@ -41,6 +41,7 @@ public static void main (String[] args)
          * advantage: not give an out of bounds error
          * limits: will not change the int value in the array
          */
+        /*
         for (int s: values)
         {
              System.out.println(s);
@@ -89,12 +90,15 @@ public static void main (String[] args)
 
 
 
- /*
+ /**/
        //make a two dementional array
+       // r c
        int [][] table = new int [5][10];
 
        // Load the table with values
+       // row major - .length is how many rows
        for (int row=0; row < table.length; row++)
+       //[r].length is how many columns
           for (int col=0; col < table[row].length; col++)
              table[row][col] = row * 10 + col;
 
@@ -106,28 +110,34 @@ public static void main (String[] args)
 
             System.out.println();
         }
+        System.out.println(table[4][9]);
 
 
     // make a 2d array with an iniitalizer list.
     //print the length of row and col
-/*
+/**/
     int [][] scores = { {1,2,3},//6
                         {2,2,3},//7
                         {3,2,3},//8
                         {4,2,3}    };//9
 
+    mathy useful = new mathy();
     //how many columns
     System.out.println(scores[0].length+"col");
     //how many rows
     System.out.println(scores.length+"row");
 
     //sum entire 2D array
+    int arrSum = useful.sum2DArray(scores);
     System.out.print("The sum of this array is" );
 
     //sum a row of 2D array
-    System.out.print("The sum of row "));
+    System.out.print("The sum of row ");
 
-
+    //sum a row of 2D array
+    //System.out.print("The sum of row ");
+    int rowSum = useful.sumOneRow2DArray(1);
+    System.out.print("The sum of this row is"+rowSum);
 
 
 

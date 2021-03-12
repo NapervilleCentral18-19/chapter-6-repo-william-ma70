@@ -1,0 +1,11 @@
+#BlueJ class context
+comment0.target=gameofnim
+comment1.params=
+comment1.target=void\ displayNim()
+comment2.params=col\ take
+comment2.target=void\ takeStones(int,\ int)
+comment3.params=
+comment3.target=void\ reset()
+comment4.params=args
+comment4.target=void\ main(java.lang.String[])
+numComments=5
