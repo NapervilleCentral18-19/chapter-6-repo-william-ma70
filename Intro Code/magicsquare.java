@@ -13,13 +13,12 @@ import java.util.*;
 
 public class magicsquare
 {
-    public int magicnum;
-    public int [] [] square;
+    private int magicnum;
+    private int [] [] square;
     public magicsquare(int [] [] array)
     {
         setMagicSquare(array);
-        magicnum=addRow(0);
-        System.out.println("magicnum:"+magicnum);
+        
         //sets the magicnum = one row/col of the array
         
     }
@@ -27,7 +26,6 @@ public class magicsquare
     public boolean isMagic()
     {
         boolean magic=true;
-        System.out.println(square.length);
         for(int s=0; s<square.length; s++)
         {
             
@@ -45,7 +43,10 @@ public class magicsquare
                 break;
             }
             }     
-        System.out.println(magic);
+        if ((addDiagonals()/2)!=magicnum)
+        {
+            magic = false;
+        }
         return magic;
     }
     
@@ -56,6 +57,7 @@ public class magicsquare
     public void setMagicSquare(int [] [] array)
     {
         square = array;
+        magicnum=addRow(0);
     }
     public int addRow(int row)
     {
@@ -64,13 +66,23 @@ public class magicsquare
              rowsum+=square[row] [s];
         return rowsum;
     }
-    int addColumns(int col)
+    public int addColumns(int col)
     {
         int colsum=0;
         for(int s=0; s<square.length; s++)
             colsum+=square[s] [col];
         return colsum;
     }
+    public int addDiagonals()
+    {
+        int diagsum=0;
+        for(int s=0; s<square.length; s++)
+            diagsum+=square[s] [s];
+        for(int s=0; s<square.length; s++)
+            diagsum+=square[s] [square.length-s-1];
+        return diagsum;
+    }
+    
     //comment loops – what row, column, or diagonal are the totaling
     
 }// end of class

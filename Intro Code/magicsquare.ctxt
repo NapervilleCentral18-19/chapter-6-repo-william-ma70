@@ -12,4 +12,6 @@ comment5.params=row
 comment5.target=int\ addRow(int)
 comment6.params=col
 comment6.target=int\ addColumns(int)
-numComments=7
+comment7.params=
+comment7.target=int\ addDiagonals()
+numComments=8
