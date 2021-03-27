@@ -1,0 +1,9 @@
+#BlueJ class context
+comment0.target=Store
+comment1.params=
+comment1.target=Store()
+comment2.params=customerName\ amount
+comment2.target=void\ addSale(java.lang.String,\ double)
+comment3.params=
+comment3.target=java.lang.String\ nameOfBestCustomer()
+numComments=4
