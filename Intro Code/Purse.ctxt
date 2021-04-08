@@ -1,0 +1,21 @@
+#BlueJ class context
+comment0.target=Purse
+comment1.params=
+comment1.target=Purse()
+comment2.params=coin
+comment2.target=void\ add(Coin)
+comment3.params=
+comment3.target=double\ getTotal()
+comment4.params=
+comment4.target=int\ getNumberofDimes()
+comment5.params=
+comment5.target=int\ getNumberofPenny()
+comment6.params=
+comment6.target=int\ getNumberofNickels()
+comment7.params=
+comment7.target=int\ getNumberofQuarters()
+comment8.params=c
+comment8.target=void\ RemoveCoin(char)
+comment9.params=
+comment9.target=java.lang.String\ toString()
+numComments=10
